@@ -47,3 +47,42 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 | inherit  | 规定应该从父元素继承 position 属性的值。                     |
 
 可以和word文档中的图片位置进行对比想象
+
+## Units
+
+| 单位 | 描述                                                         |
+| :--- | :----------------------------------------------------------- |
+| em   | 相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍） |
+| ex   | 相对于当前字体的 x-height(极少使用)                          |
+| ch   | 相对于 "0"（零）的宽度                                       |
+| rem  | 相对于根元素的字体大小（font-size）                          |
+| vw   | 相对于视口*宽度的 1%                                         |
+| vh   | 相对于视口*高度的 1%                                         |
+| vmin | 相对于视口*较小尺寸的 1％                                    |
+| vmax | 相对于视口*较大尺寸的 1％                                    |
+| %    | 相对于父元素                                                 |
+
+## Center anything inside a parent container
+
+1) Make the parent position:relative;
+
+```css
+.parent{
+    position:relative;
+}
+```
+
+2. Add these styles to the child
+
+```css
+.child{
+    position: absolute;  
+    top:50%;  
+    left:50%;  
+    transform:translate(-50%,-50%)
+}
+```
+
+## z-index
+
+越小越容易被覆盖

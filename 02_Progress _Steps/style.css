@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap');
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #383838;
+}
+
+
+* {
+    /* include the padding and border in an element's total width and height. */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f1f1f;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    /* main-axis default: row*/
+    flex-direction: row;
+    /* how flex items are laid out along the cross axis on the current line. */
+    align-items: center;
+    /* This defines the alignment along the main axis.  */
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    color: aliceblue
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* 使用相对于周边元素的位置 */
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+/* The ::before selector inserts something before the content of each selected element(s). */
+.progress-container::before {
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.progress {
+    background-color: var(--line-border-fill);
+    /* 使用absolute-相对于父元素的位置 */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* move the element by the half of its height up or back from the position 
+    where it was pushed by the previous positioning directions in relation to the containing element. */
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+
+.circle {
+    background-color: #1f1f1f;
+    color: #e2e2e2;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+}
+
+.btn {
+    background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    /* receive the body's font family */
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0
+}
+
+.btn:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
