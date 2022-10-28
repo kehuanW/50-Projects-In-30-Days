@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap');
+
+* {
+    /* include the padding and border in an element's total width and height. */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    /* main-axis */
+    flex-direction: row;
+    /* how flex items are laid out along the cross axis on the current line. */
+    align-items: center;
+    /* This defines the alignment along the main axis.  */
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    /* how a flex item will grow or shrink to fit the space available in its flex container. */
+    flex: 0.5;
+    margin: 10px;
+
+    /* position static: 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。 */
+    /* 生成相对定位的元素，相对于其正常位置进行定位。 */
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    /* 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。 */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* The @media rule is used in media queries to apply different styles for different media types/devices. */
+@media (max-width: 800px) {
+    .container {
+        width: 100vw;
+    }
+
+    /* matches elements based on their position among siblings of the same type (tag name). */
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
