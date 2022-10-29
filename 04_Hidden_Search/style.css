@@ -43,15 +43,13 @@ button {
     cursor: pointer;
     border: 0;
     position: absolute;
-    top: 0;
-    left: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 24px;
     width: 40px;
     height: 40px;
-    transition: width 10s ease;
+    transition: 0.3s ease;
 }
 
 .container.active button {
