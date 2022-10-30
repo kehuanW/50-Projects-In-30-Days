@@ -86,3 +86,16 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 ## z-index
 
 越小越容易被覆盖
+
+# Others
+
+## Map a range of values
+
+https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
+
+```js
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+}
+```
+
