@@ -23,6 +23,7 @@ body {
 .container {
     height: 100vh;
     width: 100vw;
+    display: flex;
 }
 
 .split {
@@ -38,9 +39,6 @@ body {
 }
 
 .split.left {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 50%;
     background: url('./ps.jpg');
     background-position: center;
@@ -58,9 +56,6 @@ body {
 }
 
 .split.right {
-    position: absolute;
-    top: 0;
-    left: 50%;
     width: 50%;
     background: url('./xbox.jpg');
     background-position: center;
