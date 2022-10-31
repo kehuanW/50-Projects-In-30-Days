@@ -41,7 +41,7 @@ body {
 .split.left {
     width: 50%;
     background: url('./ps.jpg');
-    background-position: center;
+    /* background-position: center; */
     background-repeat: non-repeat;
     background-size: cover;
 }
@@ -58,7 +58,7 @@ body {
 .split.right {
     width: 50%;
     background: url('./xbox.jpg');
-    background-position: center;
+    /* background-position: center; */
     background-repeat: non-repeat;
     background-size: cover;
 }
@@ -113,5 +113,13 @@ a {
 }
 
 .container.left-hover .split.right {
+    width: var(--other-width);
+}
+
+.container.right-hover .split.right {
+    width: var(--hover-width);
+}
+
+.container.right-hover .split.left {
     width: var(--other-width);
 }
