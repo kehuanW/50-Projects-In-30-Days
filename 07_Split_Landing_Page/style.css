@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(28, 122, 28, 1);
+}
+
+* {
+    /* include the padding and border in an element's total width and height. */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.split {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    color: white;
+    /* 这里是对h1和button的排列调整 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.split.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background: url('./ps.jpg');
+    background-position: center;
+    background-repeat: non-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    /* 这里必须要加上长和宽和content，不然不会出现background-color */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+
+.split.right {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    background: url('./xbox.jpg');
+    background-position: center;
+    background-repeat: non-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    /* 这里必须要加上长和宽和content，不然不会出现background-color */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+h1 {
+    color: #fff;
+    font-size: 2.3rem;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+a {
+    /* 对按钮大小的调整 注意没有直接用px指定长和宽*/
+    border: #fff solid 0.2rem;
+    width: 8rem;
+    padding: 1rem;
+    /* 调整buy now文字的位置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    /* 对buy now字体的调整 */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.split.left .btn:hover {
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+}

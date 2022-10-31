@@ -88,6 +88,18 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 
 越小越容易被覆盖
 
+## Why does "left: 50%, transform: translateX(-50%)" horizontally center an element?
+
+Name: transform
+
+Percentages: refer to the size of bounding box [of the element to which the style is applied]
+
+'top'
+
+Percentages: refer to height of containing block
+
+https://stackoverflow.com/questions/25982135/why-does-left-50-transform-translatex-50-horizontally-center-an-element
+
 # Others
 
 ## Map a range of values
@@ -99,4 +111,3 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
 ```
-
