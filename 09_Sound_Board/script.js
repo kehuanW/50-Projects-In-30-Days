@@ -7,7 +7,7 @@ audio_ids.forEach((audio_id) => {
 
     btn.addEventListener('click', () => {
         stopAllSongs()
-        document.getElementsById(audio_id).play()
+        document.getElementById(audio_id).play()
     })
     document.getElementById('buttons').appendChild(btn)
 })
@@ -15,7 +15,7 @@ audio_ids.forEach((audio_id) => {
 function stopAllSongs() {
     audio_ids.forEach(audio_id => {
         const song = document.getElementById(audio_id)
-        song.onpause();
+        song.pause();
         song.currentTime = 0;
     })
 }
