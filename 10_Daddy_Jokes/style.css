@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    /* include the padding and border in an element's total width and height. */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: cornflowerblue;
+    display: flex;
+    /* how flex items are laid out along the cross axis on the current line. */
+    align-items: center;
+    /* This defines the alignment along the main axis.  */
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: gray;
+    opacity: 0.8;
+    font-size: 1em;
+    letter-spacing: 0.3rem;
+
+}
+
+.joke {
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+#btn {
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+#btn:hover {
+    cursor: pointer;
+}
+
+#btn:focus {
+    scale: 0.98;
+}
