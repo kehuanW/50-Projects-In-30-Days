@@ -100,6 +100,29 @@ Percentages: refer to height of containing block
 
 https://stackoverflow.com/questions/25982135/why-does-left-50-transform-translatex-50-horizontally-center-an-element
 
+## padding/margin(记住顺时针)
+
+If the `padding` property has four values:()
+
+- padding: 25px 50px 75px 100px;
+  - top padding is 25px
+  - right padding is 50px
+  - bottom padding is 75px
+  - left padding is 100px
+
+If the `padding` property has three values:
+
+- padding: 25px 50px 75px;
+  - top padding is 25px
+  - right and left paddings are 50px
+  - bottom padding is 75px
+
+If the `padding` property has two values:
+
+- padding: 25px 50px;
+  - top and bottom paddings are 25px
+  - right and left paddings are 50px
+
 # Others
 
 ## Map a range of values

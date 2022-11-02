@@ -22,11 +22,14 @@ body {
     background-color: white;
     padding: 30px 50px;
     border-radius: 5px;
-
-    display: flex;
+    /* double layers shadow */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    /* 替代display:flex的用法 */
+    text-align: center;
 }
 
 h1 {
@@ -38,23 +41,30 @@ h1 {
 }
 
 .joke {
+    letter-spacing: 1px;
+    /* 调整行间距 */
+    line-height: 40px;
     margin: 40px auto;
     flex-wrap: wrap;
 }
 
 #btn {
+    cursor: pointer;
     background-color: blueviolet;
     border: 0;
     border-radius: 5px;
     color: white;
-    padding: 10px;
-    box-shadow: 5px 5px 10px gray;
+    /* padding: 10px; */
+    padding: 14px 40px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-#btn:hover {
-    cursor: pointer;
-}
-
-#btn:focus {
+/* 如果用focus的话会出现点击后不会弹回来 */
+#btn:active {
     scale: 0.98;
+}
+
+.btn:focus {
+    outline: 0;
 }
