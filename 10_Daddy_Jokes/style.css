@@ -30,6 +30,8 @@ body {
     justify-content: center; */
     /* 替代display:flex的用法 */
     text-align: center;
+    /* 固定宽度，不然宽度会随内容的变化而变化 */
+    width: 800px;
 }
 
 h1 {
