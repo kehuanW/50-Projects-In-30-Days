@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    /* include the padding and border in an element's total width and height. */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    /* main-axis */
+    flex-direction: column;
+    /* how flex items are laid out along the cross axis on the current line. */
+    align-items: center;
+    /* This defines the alignment along the main axis.  */
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
