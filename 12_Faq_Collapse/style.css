@@ -18,3 +18,10 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.faq {
+    height: auto;
+    width: auto;
+    /* border需要指定type*/
+    border: solid
+}

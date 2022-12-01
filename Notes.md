@@ -65,7 +65,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 
 ## Center anything inside a parent container
 
-1) Make the parent position:relative;
+1. Make the parent position:relative;
+
+   注意：如果要确定父元素的高度和宽度，需要使用静态高度和静态宽度，%不可以。
 
 ```css
 .parent{
